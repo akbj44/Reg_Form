@@ -54,9 +54,7 @@ namespace RegistrationForm
             {
                 string mySQL = string.Empty;
 
-                mySQL += "SELECT * FROM User_Registration_Form";
-                mySQL += "WHERE Username = '" + usernameTextBox.Text + "' ";
-                mySQL += "AND Password = '" + passwordTextBox.Text + "' ";
+                mySQL += "SELECT * FROM User_Registration_Form WHERE Username = '" + usernameTextBox.Text + "' AND Password = '" + passwordTextBox.Text + "' ";
 
                 DataTable userData = ServerConnection.executeSQL(mySQL);
 
@@ -78,7 +76,7 @@ namespace RegistrationForm
                 }
                 else
                 {
-                    MessageBox.Show("The Username or Passowrd is Incorrect",
+                    MessageBox.Show("The Username or Passowrd is Incorrect. Try Again", "Login Form",
                         MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     usernameTextBox.Focus();
                     usernameTextBox.SelectAll();
@@ -87,7 +85,7 @@ namespace RegistrationForm
             }
             else
             {
-                MessageBox.Show("Please Enter Username and Password",
+                MessageBox.Show("Please Enter Username and Password", "Login Form",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 usernameTextBox.Select();
             }

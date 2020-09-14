@@ -11,7 +11,7 @@ namespace RegistrationForm.Connection
 {
     class ServerConnection
     {
-        public static string stringConnection = "Data Source = DESKTOP-DGTJFLS\\SQLEXPRESS01; Initial Catalog = LoginDatabase; Integrated Security = True;";
+        public static string stringConnection = "Data Source = DESKTOP-DGTJFLS\\SQLEXPRESS01; Initial Catalog = DEMO_BANK; Integrated Security = True;";
 
         public static DataTable executeSQL(string sql)
         {
